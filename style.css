@@ -1,0 +1,242 @@
+/*
+Theme Name: WP Bootstrap
+Theme URI: http://teamtreehouse.com/how-to-build-a-simple-responsive-wordpress-site-with-twitter-bootstrap
+Description: A simple responsive theme built with Bootstrap
+Author: Zac Gordon
+Author URI: http://zacgordon.com/
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This is an example theme to go along with the Treehouse blog post on <a href="http://teamtreehouse.com/how-to-build-a-responsive-wordpress-site-with-twitter-bootstrap">How to Build a Simple Responsive WordPress Site Using Twitter Bootstrap</a>.
+*/
+
+@import url('bootstrap/css/bootstrap.css');
+@import url('bootstrap/css/bootstrap-responsive.css');
+
+
+@font-face {
+	font-family: Helvetica;
+	src: url('bootstrap/fonts/helvetica-webfont-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helvetica-webfont-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helvetica-webfont-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helvetica-webfont-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: HelveticaNeue;
+	src: url('bootstrap/fonts/helveticaneue-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helveticaneue-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helveticaneue-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helveticaneue-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: HelveticaNeueLight;
+	src: url('bootstrap/fonts/helveticaneue-light-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helveticaneue-light-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helveticaneue-light-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helveticaneue-light-webfont.svg') format('svg');
+}
+@font-face {
+	font-family: HelveticaNeueUltraLight;
+	src: url('bootstrap/fonts/helveticaneue-ultralight-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helveticaneue-ultralight-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helveticaneue-ultralight-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helveticaneue-ultralight-webfont.svg') format('svg');
+}
+
+@font-face {
+	font-family: HelveticaNeueMedium;
+	src: url('bootstrap/fonts/helveticaneue-medium-webfont.eot') format('eot'),
+		url('bootstrap/fonts/helveticaneue-medium-webfont.woff') format('woff'), 
+		url('bootstrap/fonts/helveticaneue-medium-webfont.ttf') format('truetype'), 
+		url('bootstrap/fonts/helveticaneue-medium-webfont.svg') format('svg');
+}
+
+
+body {
+	padding-top: 60px;
+	padding-bottom: 40px;
+}
+
+p {
+	font-family:HelveticaNeueLight, serif;
+	text-align: justify;
+	font-size: 16px;
+	line-height:1.5;
+	padding-bottom:10px;
+}
+h1 {
+	font-family:HelveticaNeue, serif;
+}
+h2 {
+}
+h3 {
+	font-family:HelveticaNeue, serif;
+}
+h4 {
+}
+h5 {
+}
+h6  {
+}
+
+/* LINKS */
+/* unvisited link */
+a:link {
+    color: #7F7F7F;
+}
+
+/* visited link */
+a:visited {
+    color: #7F7F7F;
+}
+
+/* mouse over link */
+a:hover {
+    color: #333333;
+	text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: #7F7F7F;
+}
+
+
+/* NAVBAR*/
+.navbar-brand a:link {
+	color: #7F7F7F;
+}
+.navbar-brand a:visited {
+	color: #7F7F7F;
+}
+.navbar-brand a:hover {
+	color: #333333;
+}
+.navbar-brand a:active {
+	color: #7F7F7F;
+}
+
+/* RIGHT NAVBAR */
+.navbar-right {
+	margin-left:0;
+	margin-right:0;
+}
+.icons-right-navbar {
+	display: block;
+	list-style-type: disc;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+}
+.icons-right-navbar a {
+	padding-right:5px;
+}
+
+.icons-right-navbar a:link{
+	color: #7F7F7F;
+}
+.icons-right-navbar a:visited{
+	color: #7F7F7F;
+}
+.icons-right-navbar a:hover{
+	color: #333333;
+}
+.icons-right-navbar a:active{
+	color: #7F7F7F;
+}
+
+
+/* V LOGO */
+.vlogo {
+	z-index: 99;
+	height: auto;
+	width: 100%;
+	text-align: center;
+}
+
+.vlogo img {
+	z-index: 99;
+	margin-top: 50px;
+	position: fixed;
+	margin-left: -76px;
+	opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	width: auto;
+	height:auto;
+}
+
+.vlogo img:hover {
+	z-index: 99;
+	margin-top: 50px;
+	position: fixed;
+	margin-left: -76px;
+	opacity: 0.3;
+    filter: alpha(opacity=30); /* For IE8 and earlier */
+}
+
+
+/* TITLE */
+#title {
+	padding-top: 16em;
+}
+
+h3.title {
+	font-family: "Didot";
+	color: #B1B1B1;
+}
+
+/* HR BAR STYLE */
+/* Gradient transparent - color - transparent */
+		
+hr.style-virginia {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.50), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.50), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.50), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.50), rgba(0,0,0,0)); 
+}
+
+/* THUMBNAILS */
+.my-thumbnails {
+	/* RESPONSIVE */
+	position:relative;
+	display: block;
+	max-width: 100%;
+	height: auto;
+	padding-top: 4em;
+	z-index: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+
+.my-thumbnails:hover {
+	opacity: 0.5;
+	filter: alpha(opacity=50);
+}
+
+.thumbnails-viewport {
+	padding-bottom: 10em;	
+}
+
+.project-row-page {
+	padding-top: 4em;
+	padding-bottom: 10em;
+}
+
+.project-row {
+	padding-top: 4em;
+}
+
+img {
+	position:relative;
+	width: 100%;
+	height: auto;
+}
