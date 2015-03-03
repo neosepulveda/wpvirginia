@@ -1,7 +1,7 @@
      <hr class="style-virginia">
 
       <footer>
-        <p>© Virginia de Colombani 2015</p>
+        <p>&copy Virginia de Colombani 2015</p>
       </footer>
 
     </div> <!-- /container -->
