@@ -22,6 +22,7 @@
 				while (have_posts()) : the_post();
 					?> <div class="col-md-6 col-xs-12"> <?php
 					// check if the post has a Post Thumbnail assigned to it.
+					
 					if ( has_post_thumbnail() ) {
 						?><a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'my-thumbnails')); ?> </a> <?php
 					}					

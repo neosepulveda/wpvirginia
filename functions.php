@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 add_action( 'wp_enqueue_scripts', 'prefix_enqueue_awesome' );
 /**
  * Register and load font awesome CSS files using a CDN.
