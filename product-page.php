@@ -49,7 +49,7 @@ $wp_query = new WP_Query($args);
 						?><a href="<?php echo get_permalink(); ?>"> <?php the_post_thumbnail( 'single-post-thumbnail', array('class' => 'my-thumbnails')); ?> </a> <?php
 						}					
 						?> <a href="<?php echo get_permalink(); ?>"><h3> <?php the_title(); ?> </h3></a>
-						<p><?php the_field('captionthumbnails'); ?></p>
+						<p class="caption-thumbnails"><?php the_field('captionthumbnails'); ?></p>
 						</div>
 						<?php
 					endwhile; ?>

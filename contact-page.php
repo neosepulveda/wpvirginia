@@ -5,8 +5,10 @@
 get_header(); 
 
 ?>
+</div> <!-- container -->
 
-
+<div id="contact-wrap">
+<div class="container">
 	<div class="row project-row-page">
 		<div class="col-md-12 col-xs-12">
 			<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -26,7 +28,8 @@ get_header();
 			<?php endif; ?>
 		</div>
 	</div>
+</div> <!-- container -->
+</div> <!-- contact-wrap -->
 
-
-
+<div class="container">
 <?php get_footer(); ?>
