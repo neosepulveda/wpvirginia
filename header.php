@@ -4,11 +4,12 @@
  *
  * Displays all of the <head> section and everything up till <main id="main">
  *
- * @package metro-creativex
+ * @package wp-virginia
  */
 ?>
 <html <?php language_attributes(); ?>>
 <head>
+	<link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/img/Vlogo.png" />
 	<meta charset="utf-8">
     <title>Virginia Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,8 +28,8 @@
 </head>
 
 	<?php echo '<body class="'.join(' ', get_body_class()).'">'.PHP_EOL; ?>  <!-- Replacing the body tag <body> -->
-
-	<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	
+	<div class="navbar navbar-default navbar-fixed-top navbar-shadow" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -38,13 +39,39 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-				<a class="navbar-brand" href="<?php echo site_url(); ?>"><?php echo get_the_title('4'); ?></a>
+				<a class="navbar-brand" href="<?php echo site_url(); ?>"><?php echo get_the_title('4'); ?></a>				
 			</div>
 			
 			<!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
-					<?php wp_list_pages(array('title_li' => '', 'exclude' => 4)); ?>
+					<li class="dropdown">
+                		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Projects <span class="caret"></span></a>
+                		<ul class="dropdown-menu" role="menu">
+                  			<?php /* UPDATE FOR PRINTS wp_list_pages(array('title_li' => '', 'exclude' => '4,41,243')); */ ?>
+                  			<?php
+                  				/*
+						 		 * Excluded pages: 
+						 		 * 4   ---> Home
+								 * 41  ---> Contact
+								 * 239  ---> Print IMPORTANT: IT HAS TO BE INCLUDED AFTER SOME PRINTS!
+								 * 243 --->	Clients 
+								 */
+                  				wp_list_pages(array('title_li' => '', 'exclude' => '4,41,239,243')); 
+                  				                 				
+                  			?>               			
+                		</ul>
+              		</li>              		
+					<?php
+						/*
+						 * Excluded pages: 
+						 * 4   ---> Home
+						 * 37  ---> Product
+						 * 39  ---> Space
+						 * 239 --->	Print 
+						 */				
+						wp_list_pages(array('title_li' => '', 'exclude' => '4,37,39,239')); 
+					?>										
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">

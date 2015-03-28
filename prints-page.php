@@ -1,10 +1,8 @@
 <?php
 /*
-	Template Name: Product Page
+	Template Name: Prints Page
 */
-get_header();
-
-
+get_header(); 
 
 // pagination
 if ( get_query_var('paged') )
@@ -16,14 +14,15 @@ else
  
 // arguments for the new query
 $args = array(
-        'category_name' => 'product',
+        'category_name' => 'print',
         'paged' => $paged
         // you could use the id to
         // 'cat' => 2 or whatever is the id for your category
         ); 
 		
-$wp_query = new WP_Query($args);		
-?>	
+$wp_query = new WP_Query($args);
+?>
+	
 	<div class="row v-row">		
 		<div class="vlogo">
 			<a href="<?php echo site_url(); ?>">
@@ -39,7 +38,7 @@ $wp_query = new WP_Query($args);
 		</div>
 	</div> <!-- row -->
 
-	<div class="row thumbnails-viewport">		
+	<div class="row thumbnails-viewport">				
 			<?php
 				if($wp_query->have_posts()):
 					while ($wp_query->have_posts()) : $wp_query->the_post();

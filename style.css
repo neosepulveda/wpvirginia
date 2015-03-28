@@ -17,6 +17,8 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
 @import url('bootstrap/css/bootstrap-responsive.css');
 
 
+.admin-bar .navbar-fixed-top { top:26px; @media screen and (min-width:782px) { top:32px; } }
+
 @font-face {
 	font-family: Helvetica;
 	src: url('bootstrap/fonts/helvetica-webfont-webfont.eot') format('eot'),
@@ -58,7 +60,7 @@ This is an example theme to go along with the Treehouse blog post on <a href="ht
 
 
 body {
-	padding-top: 60px;
+	padding-top: 0px;
 	padding-bottom: 40px;
 }
 
@@ -116,6 +118,7 @@ a:active {
 
 
 /* NAVBAR*/
+
 .navbar-brand a:link {
 	color: #7F7F7F;
 }
@@ -127,6 +130,14 @@ a:active {
 }
 .navbar-brand a:active {
 	color: #7F7F7F;
+}
+
+/* NAVBAR SHADOW */
+.navbar-shadow {
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.26);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.26);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.26);
+	z-index: 99;
 }
 
 /* RIGHT NAVBAR */
@@ -141,7 +152,7 @@ a:active {
 	-webkit-margin-after: 1em;
 	-webkit-margin-start: 0px;
 	-webkit-margin-end: 0px;
-	-webkit-padding-start: 40px;
+	-webkit-padding-start: 10px;
 }
 .icons-right-navbar a {
 	padding-right:5px;
@@ -162,6 +173,11 @@ a:active {
 
 
 /* V LOGO */
+
+.v-row {
+	padding-top: 5vw;	
+}
+
 .vlogo {
 	z-index: 99;
 	height: auto;
@@ -240,7 +256,7 @@ hr.style-virginia {
 }
 
 .project-row-page {
-	padding-top: 4em;
+	padding-top: 7vw;
 	padding-bottom: 10em;
 }
 

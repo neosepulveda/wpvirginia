@@ -23,7 +23,7 @@ $args = array(
 $wp_query = new WP_Query($args);
 ?>
 	
-	<div class="row">		
+	<div class="row v-row">		
 		<div class="vlogo">
 			<a href="<?php echo site_url(); ?>">
 				<img src="<?php echo get_template_directory_uri(); ?>/img/Vlogo.png" alt="vlogo">
@@ -41,7 +41,7 @@ $wp_query = new WP_Query($args);
 	<div class="row thumbnails-viewport">				
 			<?php
 				if($wp_query->have_posts()):
-					while ($wp_query->have_posts()) : the_post();
+					while ($wp_query->have_posts()) : $wp_query->the_post();
 						?> <div class="col-md-6 col-xs-12"> <?php
 						// check if the post has a Post Thumbnail assigned to it.
 						if ( has_post_thumbnail() ) {
@@ -54,7 +54,7 @@ $wp_query = new WP_Query($args);
 					endwhile; ?>
 			<?php endif; ?>		
 	</div>
-
+	<?php wp_reset_query(); ?>
 
 
 <?php get_footer(); ?>
